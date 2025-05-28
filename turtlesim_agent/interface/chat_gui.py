@@ -1,6 +1,5 @@
 import asyncio
 import sys
-import threading
 import tkinter as tk
 from asyncio import run_coroutine_threadsafe
 from tkinter import scrolledtext

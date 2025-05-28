@@ -2,7 +2,7 @@
 
 import math
 
-from langchain.tools import StructuredTool, Tool, tool
+from langchain.tools import tool
 
 
 @tool
