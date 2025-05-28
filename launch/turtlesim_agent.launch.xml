@@ -2,12 +2,9 @@
 <launch>
   <arg name="interface" default="gui"/>
   <arg name="agent_model" default="gemini-2.0-flash"/>
-
-  <node pkg="turtlesim" exec="turtlesim_node" output="screen" />
-
+  <node pkg="turtlesim" exec="turtlesim_node" output="screen"/>
   <node pkg="turtlesim_agent" exec="turtlesim_agent_node" output="screen">
-    <param name="interface" value="$(var interface)" />
-    <param name="agent_model" value="$(var agent_model)" />
+    <param name="interface" value="$(var interface)"/>
+    <param name="agent_model" value="$(var agent_model)"/>
   </node>
-
 </launch>
