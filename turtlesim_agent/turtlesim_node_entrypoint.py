@@ -1,11 +1,8 @@
 import asyncio
-import math
 import threading
-import time
 
 import rclpy
 from rclpy.executors import ExternalShutdownException, SingleThreadedExecutor
-from rclpy.node import Node
 
 from turtlesim_agent.turtlesim_node import TurtleSimAgent
 

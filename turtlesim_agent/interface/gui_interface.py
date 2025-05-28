@@ -1,5 +1,3 @@
-import asyncio
-
 from turtlesim_agent.interface.base_interface import BaseAgentInterface
 
 

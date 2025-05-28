@@ -18,6 +18,6 @@ setup(
     license="TODO: License declaration",
     tests_require=["pytest"],
     entry_points={
-        "console_scripts": ["main = turtlesim_agent.main:main"],
+        "console_scripts": ["turtlesim_agent_node = turtlesim_agent.main:main"],
     },
 )
