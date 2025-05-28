@@ -63,3 +63,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Apply formatting to PR files"
+          repository: https://x-access-token:${{ secrets.GH_PAT }}@github.com/Yutarop/turtlesim_agent.git
