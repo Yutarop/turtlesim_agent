@@ -63,4 +63,3 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Apply formatting to PR files"
-          token: ${{ secrets.GH_TOKEN }}
