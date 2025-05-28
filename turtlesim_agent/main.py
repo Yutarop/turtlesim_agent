@@ -52,10 +52,10 @@ def main():
         return
 
     tools = make_all_tools(node)
-    agent = create_agent(model_name="gemini-2.0-flash", tools=tools, temperature=0.0)
+    agent = create_agent(model_name=node.agent_model, tools=tools, temperature=0.0)
     agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
     chat_invoke(
-        interface="cli",
+        interface=node.interface,
         agent_executor=agent_executor,
         node=node,
         spin_thread=spin_thread,

@@ -21,6 +21,15 @@ PUBLISH_RATE = 0.05
 class TurtleSimAgent(Node):
     def __init__(self):
         super().__init__("turtlesim_agent")
+        self.declare_parameter("interface", "cli")
+        self.declare_parameter("agent_model", "gemini-2.0-flash")
+
+        self.interface = (
+            self.get_parameter("interface").get_parameter_value().string_value
+        )
+        self.agent_model = (
+            self.get_parameter("agent_model").get_parameter_value().string_value
+        )
 
         # Movement publisher and subscription
         self.pub = self.create_publisher(Twist, f"/turtle1/cmd_vel", 10)
