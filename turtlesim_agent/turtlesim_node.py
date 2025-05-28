@@ -1,11 +1,9 @@
-import asyncio
 import math
 import threading
 import time
 
 import rclpy
 from geometry_msgs.msg import Twist
-from rclpy.executors import ExternalShutdownException, SingleThreadedExecutor
 from rclpy.node import Node
 from std_srvs.srv import Empty
 from turtlesim.msg import Pose
