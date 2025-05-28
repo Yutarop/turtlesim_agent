@@ -6,6 +6,8 @@ on:
 jobs:
   format:
     runs-on: ubuntu-latest
+    permissions:    
+      contents: write
     strategy:
       matrix:
         python-version: [3.10.12]
@@ -63,3 +65,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Apply formatting to PR files"
+          commit_user_name: github-actions[bot]
+          commit_user_email: github-actions[bot]@users.noreply.github.com
