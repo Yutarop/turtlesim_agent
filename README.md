@@ -135,7 +135,7 @@ To evaluate the drawing capabilities of the `turtlesim_agent`, we defined 10 lev
 | 2     | Parallelogram                    | —           | —                | —       | —              |
 | 2     | Pentagon                         | —           | —                | —       | —              |
 | 3     | Ellipse                          | —           | —                | —       | —              |
-| 3     | Star shape made of lines        | —           | —                | —       | —              |
+| 3     | Star shape made of lines        | [⭕](images/gpt-4o-mini/level3_star_shape_made_of_lines.png)           | —                | —       | —              |
 | 3     | Circle inside a triangle         | —           | —                | —       | —              |
 | 4     | Hexagon                          | —           | —                | —       | —              |
 | 4     | Octagon                          | —           | —                | —       | —              |
