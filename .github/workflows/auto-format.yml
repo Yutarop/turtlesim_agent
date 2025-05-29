@@ -6,6 +6,8 @@ on:
 jobs:
   format:
     runs-on: ubuntu-latest
+    permissions:    
+      contents: write
     strategy:
       matrix:
         python-version: [3.10.12]
@@ -30,11 +32,6 @@ jobs:
           rustup update
           rustup component add rustfmt
 
-      # C++ Formatting
-      - name: Run clang-format
-        run: |
-          find . -type f \( -name "*.cpp" -or -name "*.hpp" -or -name "*.h" \) -exec clang-format -i -style=file {} \;
-
       # Python Formatting
       - name: Run autoflake
         run: |
@@ -53,13 +50,10 @@ jobs:
         run: |
           find . -type f \( -name "*.xml" -or -name "*.gazebo" -or -name "*.xacro" -or -name "*.urdf" -or -name "*.sdf" \) -exec xmllint --format -o {} {} \;
 
-      # Rust Formatting
-      - name: Run rustfmt
-        run: |
-          find . -type f -name "*.rs" -exec rustfmt {} \;
-
       # Auto commit if any changes
       - name: Auto commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Apply formatting to PR files"
+          commit_user_name: github-actions[bot]
+          commit_user_email: github-actions[bot]@users.noreply.github.com

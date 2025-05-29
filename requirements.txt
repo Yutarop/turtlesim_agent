@@ -12,3 +12,5 @@ transforms3d==0.4.2
 pydantic==2.11.3
 numpy==1.26.4
 google-ai-generativelanguage==0.6.18
+langchain-cohere==0.4.4
+langchain-mistralai==0.2.10
