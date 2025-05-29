@@ -26,7 +26,7 @@ export GOOGLE_API_KEY=your_google_api_key
 export COHERE_API_KEY=your_cohere_api_key
 export MISTRAL_API_KEY=your_mistral_api_key
 ```
-   > 💡 You only need to set the keys for the providers you plan to use.
+   > 💡 You only need to set the keys for the providers you plan to use. 
 
 #### 🖥️ Using Self-Hosted LLMs (e.g., Ollama)
 If you're running a local or remote LLM server (e.g., via Ollama), specify the server URL as follows:
@@ -163,3 +163,7 @@ To evaluate the drawing capabilities of the `turtlesim_agent`, we defined 10 lev
 > ⭕ = Successfully drawn  
 > ❌ = Failed or incorrect output  
 > —  = Not yet tested
+
+## 🤝 Contributing
+We welcome any ideas that make TurtleSim Agent more creative and expressive.
+Whether it's new tools, smarter models, or entirely new use cases — feel free to open an issue or pull request. 
