@@ -38,7 +38,8 @@ prompt = ChatPromptTemplate.from_messages(
             "5. Angle Interpretation Example: "
             "If you are facing North (+1.57 radians) and need to turn West (±3.14 radians), you must rotate 90 degrees to the left, or +1.57 radians relative to your current heading. "
             "6. Planning Reminder: "
-            "Always describe your intended steps before taking any action. ",
+            "Always describe your intended steps before taking any action. "
+            "Use tools one by one so that you can get feedback. ",
         ),
         ("human", "{input}"),
         ("placeholder", "{agent_scratchpad}"),
