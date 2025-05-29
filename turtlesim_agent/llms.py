@@ -170,6 +170,5 @@ def get_available_models():
         "Google": ["gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.5-flash"],
         "Mistral AI": ["mistral-large", "mistral-medium", "mistral-small"],
         "Cohere": ["command-r-plus", "command-r"],
-        "Fireworks AI": ["llama-3.1-405b", "llama-3.1-70b", "llama-3.1-8b"],
         "Ollama (Local)": ["mistral-ollama", "gemma2", "llama3.1", "qwen2.5", "phi3", "mistral", "gemma3"]
     }
