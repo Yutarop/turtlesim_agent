@@ -91,19 +91,75 @@ $ source ~/.bashrc  # or source ~/.zshrc
 - A **CLI-based interface**, recommended for debugging and understanding the agent’s internal reasoning.  
 - A **GUI-based chat interface**, ideal for intuitive and user-friendly interaction.
 
-#### Run with CLI (Recommended for Development)
+#### ⌨️ Run with CLI (Recommended for Development)
 ```bash
 $ ros2 run turtlesim turtlesim_node
 $ ros2 run turtlesim_agent turtlesim_agent_node
 ```
-#### Run with GUI (Chat Interface)
+#### 🖼️ Run with GUI (Chat Interface)
 ```bash
 $ ros2 launch turtlesim_agent turtlesim_agent.launch.xml
 ```
 
+## 🧰 Provided Tools for the AI Agent
+`turtlesim_agent` utilizes the tools implemented in the `tools/` directory as callable functions that it can invoke during the reasoning process to accomplish user-defined drawing tasks. 
+
+#### 📁 File Structure
+```
+tools/
+├── all_tools.py # Imports and exports all available tools for the agent
+├── math_tools.py # Basic arithmetic and geometric calculations
+├── status_tools.py # Queries the current status of the turtle (e.g., position, orientation)
+├── motion_tools.py # Controls the movement of the turtle (e.g., forward, rotate)
+├── pen_tools.py # Manages pen states (e.g., color, on/off, width)
+└── simulation_tools.py # Resets simulation or spawns new turtles
+```
+#### 🚀 Extending the Agent's Creativity
+One of the core ideas behind this project is **enabling creative expression through tool augmentation**. If you'd like to enhance the agent's capabilities further, feel free to add your own tools to the `tools/` directory.
+
+To make new tools available:
+1. Create a new `*_tools.py` file in the `tools/` directory.
+2. Define your custom functions using LangChain-compatible signatures.
+3. Import them in `all_tools.py` so that the agent can access them.
+
+## 🧪 Experiment
+
+To evaluate the drawing capabilities of the `turtlesim_agent`, we defined 10 levels of shape complexity. The table below presents how each LLM agent performs shape drawing via natural language prompts in turtlesim. 
+
+| Level | Shape                            | gpt-4o-mini | gemini-2.0-flash | mistral | claude-3-opus |
+|-------|----------------------------------|-------------|------------------|---------|----------------|
+| 1     | Circle                           | —           | —                | —       | —              |
+| 1     | Square                           | —           | —                | —       | —              |
+| 1     | Triangle                         | —           | —                | —       | —              |
+| 2     | Rectangle                        | —           | —                | —       | —              |
+| 2     | Parallelogram                    | —           | —                | —       | —              |
+| 2     | Pentagon                         | —           | —                | —       | —              |
+| 3     | Ellipse                          | —           | —                | —       | —              |
+| 3     | Star shape made of lines        | —           | —                | —       | —              |
+| 3     | Circle inside a triangle         | —           | —                | —       | —              |
+| 4     | Hexagon                          | —           | —                | —       | —              |
+| 4     | Octagon                          | —           | —                | —       | —              |
+| 4     | Decagon                          | —           | —                | —       | —              |
+| 5     | Circle inside a triangle         | —           | —                | —       | —              |
+| 5     | Triangle inside a square         | —           | —                | —       | —              |
+| 5     | Square inside a circle           | —           | —                | —       | —              |
+| 6     | Cube (2D representation)         | —           | —                | —       | —              |
+| 6     | Cylinder (2D view)               | —           | —                | —       | —              |
+| 6     | Cone (2D view)                   | —           | —                | —       | —              |
+| 7     | Star-shaped polygon              | —           | —                | —       | —              |
+| 7     | Overlapping circles              | —           | —                | —       | —              |
+| 7     | Combined triangles               | —           | —                | —       | —              |
+| 8     | Spiral                           | —           | —                | —       | —              |
+| 8     | Wave shape                       | —           | —                | —       | —              |
+| 8     | Part of a fractal                | —           | —                | —       | —              |
+| 9     | Irregular polygon                | —           | —                | —       | —              |
+| 9     | Complex curve combination        | —           | —                | —       | —              |
+| 9     | Geometric pattern                | —           | —                | —       | —              |
+| 10    | Torus (2D view)                  | —           | —                | —       | —              |
+| 10    | Mandelbrot fractal section       | —           | —                | —       | —              |
+| 10    | Non-Euclidean geometric shape    | —           | —                | —       | —              |
 
 
-
-
-## Structure
-## Experiment Results
+> ⭕ = Successfully drawn  
+> ❌ = Failed or incorrect output  
+> —  = Not yet tested
