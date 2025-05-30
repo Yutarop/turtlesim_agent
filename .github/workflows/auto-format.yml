@@ -32,11 +32,6 @@ jobs:
           rustup update
           rustup component add rustfmt
 
-      # C++ Formatting
-      - name: Run clang-format
-        run: |
-          find . -type f \( -name "*.cpp" -or -name "*.hpp" -or -name "*.h" \) -exec clang-format -i -style=file {} \;
-
       # Python Formatting
       - name: Run autoflake
         run: |
@@ -54,11 +49,6 @@ jobs:
       - name: Run xmllint
         run: |
           find . -type f \( -name "*.xml" -or -name "*.gazebo" -or -name "*.xacro" -or -name "*.urdf" -or -name "*.sdf" \) -exec xmllint --format -o {} {} \;
-
-      # Rust Formatting
-      - name: Run rustfmt
-        run: |
-          find . -type f -name "*.rs" -exec rustfmt {} \;
 
       # Auto commit if any changes
       - name: Auto commit changes

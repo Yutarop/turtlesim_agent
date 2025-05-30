@@ -18,7 +18,7 @@ setup(
     zip_safe=True,
     maintainer="ubuntu",
     maintainer_email="yutarop.storm.7@gmail.com",
-    description="A ROS2 package that integrates a TurtleSim with LangChain and language models to enable natural language control of the robot.",
+    description="A ROS2 package that integrates a TurtleSim with AI agents to enable natural language control of the robot.",
     license="MIT License",
     tests_require=["pytest"],
     entry_points={
