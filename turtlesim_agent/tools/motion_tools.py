@@ -260,13 +260,13 @@ def make_teleport_relative_tool(node):
 
 def make_move_on_arc_tool(node):
     """
-    Create a tool that moves TurtleBot3 along a circular arc using radius and angle.
+    Create a tool that moves turtle along a circular arc using radius and angle.
 
     Args:
         node: The TB3Agent node instance
 
     Returns:
-        StructuredTool: LangChain tool to move TurtleBot3 along an arc.
+        StructuredTool: LangChain tool to move turtle along an arc.
     """
 
     class ArcMoveInput(BaseModel):
