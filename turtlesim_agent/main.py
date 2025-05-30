@@ -53,7 +53,9 @@ def main():
 
     tools = make_all_tools(node)
     agent = create_agent(model_name=node.agent_model, tools=tools, temperature=0.0)
-    agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+    agent_executor = AgentExecutor(
+        agent=agent, tools=tools, verbose=True, max_iterations=30
+    )
     chat_invoke(
         interface=node.interface,
         agent_executor=agent_executor,

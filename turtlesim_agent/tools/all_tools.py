@@ -13,11 +13,14 @@ Tools are organized by functionality:
 
 from turtlesim_agent.tools.math_tools import (
     calculate_euclidean_distance,
+    compute_duration_from_circular_angle_and_angular_velocity,
+    compute_linear_and_angular_velocity_from_radius,
     degrees_to_radians,
 )
 from turtlesim_agent.tools.motion_tools import (
     make_move_linear_tool,
     make_move_non_linear_tool,
+    make_move_on_arc_tool,
     make_rotate_tool,
     make_teleport_absolute_tool,
     make_teleport_relative_tool,
@@ -53,6 +56,9 @@ def make_all_tools(node) -> list:
         # Math tools
         degrees_to_radians,
         calculate_euclidean_distance,
+        compute_duration_from_circular_angle_and_angular_velocity,
+        compute_linear_and_angular_velocity_from_radius,
+        make_move_on_arc_tool(node),
         # Status tools
         make_check_bounds_tool(node),
         make_get_turtle_pose_tool(node),

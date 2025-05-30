@@ -13,7 +13,7 @@ from turtlesim_agent.utils import normalize_angle
 
 TWIST_ANGULAR = 0.8
 TWIST_VELOCITY = 1.0
-ROTATION_ERROR_THRESHOLD = 0.017  # radians
+ROTATION_ERROR_THRESHOLD = 0.034  # radians
 DISTANCE_ERROR_THRESHOLD = 0.1  # centimeters
 PUBLISH_RATE = 0.05
 
