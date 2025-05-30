@@ -13,19 +13,20 @@ from turtlesim_agent.prompts import prompt
 
 URL = os.getenv("URL")
 
+
 def create_agent(model_name: str, tools: list, temperature: float):
     """
     Create an agent with the specified language model.
-    
+
     Args:
         model_name: Name of the model to use
         tools: List of tools available to the agent
         temperature: Temperature parameter for model randomness
-    
+
     Returns:
         Agent instance
     """
-    
+
     # OpenAI Models
     if model_name == "gpt-4o":
         llm = ChatOpenAI(model="gpt-4o", temperature=temperature)
@@ -39,7 +40,7 @@ def create_agent(model_name: str, tools: list, temperature: float):
     elif model_name == "gpt-3.5-turbo":
         llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=temperature)
         return create_tool_calling_agent(llm, tools=tools, prompt=prompt)
-    
+
     # Anthropic Models
     elif model_name == "claude-3.5-sonnet":
         llm = ChatAnthropic(model="claude-3-5-sonnet-20241022", temperature=temperature)
@@ -53,7 +54,7 @@ def create_agent(model_name: str, tools: list, temperature: float):
     elif model_name == "claude":  # Keep backward compatibility
         llm = ChatAnthropic(model="claude-3-opus-20240229", temperature=temperature)
         return create_tool_calling_agent(llm, tools=tools, prompt=prompt)
-    
+
     # Google Models
     elif model_name == "gemini-2.0-flash":
         llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=temperature)
@@ -64,7 +65,7 @@ def create_agent(model_name: str, tools: list, temperature: float):
     elif model_name == "gemini-1.5-flash":
         llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=temperature)
         return create_tool_calling_agent(llm, tools=tools, prompt=prompt)
-    
+
     # Mistral AI Models
     elif model_name == "mistral-large":
         llm = ChatMistralAI(model="mistral-large-latest", temperature=temperature)
@@ -75,7 +76,7 @@ def create_agent(model_name: str, tools: list, temperature: float):
     elif model_name == "mistral-small":
         llm = ChatMistralAI(model="mistral-small-latest", temperature=temperature)
         return create_tool_calling_agent(llm, tools=tools, prompt=prompt)
-    
+
     # Cohere Models
     elif model_name == "command-r-plus":
         llm = ChatCohere(model="command-r-plus", temperature=temperature)
@@ -83,7 +84,7 @@ def create_agent(model_name: str, tools: list, temperature: float):
     elif model_name == "command-r":
         llm = ChatCohere(model="command-r", temperature=temperature)
         return create_tool_calling_agent(llm, tools=tools, prompt=prompt)
-    
+
     # Ollama Models (Local/Self-hosted)
     elif model_name == "mistral-ollama":
         llm = ChatOllama(model="mistral", base_url=URL, temperature=temperature)
@@ -120,7 +121,7 @@ def create_agent(model_name: str, tools: list, temperature: float):
         except Exception:
             react_prompt = pull("hwchase17/react")
             return create_react_agent(llm, tools=tools, prompt=react_prompt)
-    
+
     # Backward compatibility for existing model names
     elif model_name == "mistral":
         llm = ChatOllama(model="mistral", base_url=URL, temperature=temperature)
@@ -136,31 +137,49 @@ def create_agent(model_name: str, tools: list, temperature: float):
         except Exception:
             react_prompt = pull("hwchase17/react")
             return create_react_agent(llm, tools=tools, prompt=react_prompt)
-    
+
     else:
         available_models = [
             # OpenAI
-            "gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-3.5-turbo",
+            "gpt-4o",
+            "gpt-4o-mini",
+            "gpt-4-turbo",
+            "gpt-3.5-turbo",
             # Anthropic
-            "claude-3.5-sonnet", "claude-3-opus", "claude-3-haiku", "claude",
+            "claude-3.5-sonnet",
+            "claude-3-opus",
+            "claude-3-haiku",
+            "claude",
             # Google
-            "gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.5-flash",
+            "gemini-2.0-flash",
+            "gemini-1.5-pro",
+            "gemini-1.5-flash",
             # Mistral AI
-            "mistral-large", "mistral-medium", "mistral-small",
+            "mistral-large",
+            "mistral-medium",
+            "mistral-small",
             # Cohere
-            "command-r-plus", "command-r",
+            "command-r-plus",
+            "command-r",
             # Ollama
-            "mistral-ollama", "gemma2", "llama3.1", "qwen2.5", "phi3",
+            "mistral-ollama",
+            "gemma2",
+            "llama3.1",
+            "qwen2.5",
+            "phi3",
             # Backward compatibility
-            "mistral", "gemma3"
+            "mistral",
+            "gemma3",
         ]
-        raise ValueError(f"Unsupported model: {model_name}. Available models: {', '.join(available_models)}")
+        raise ValueError(
+            f"Unsupported model: {model_name}. Available models: {', '.join(available_models)}"
+        )
 
 
 def get_available_models():
     """
     Get list of all available models grouped by provider.
-    
+
     Returns:
         dict: Dictionary of models grouped by provider
     """
@@ -170,5 +189,13 @@ def get_available_models():
         "Google": ["gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.5-flash"],
         "Mistral AI": ["mistral-large", "mistral-medium", "mistral-small"],
         "Cohere": ["command-r-plus", "command-r"],
-        "Ollama (Local)": ["mistral-ollama", "gemma2", "llama3.1", "qwen2.5", "phi3", "mistral", "gemma3"]
+        "Ollama (Local)": [
+            "mistral-ollama",
+            "gemma2",
+            "llama3.1",
+            "qwen2.5",
+            "phi3",
+            "mistral",
+            "gemma3",
+        ],
     }
