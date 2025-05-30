@@ -14,6 +14,10 @@ Please note that results may vary even when using the same model, due to the non
 
 
 ## 🛠 Getting Started
+#### Requirements
+- ROS 2 Humble Hawksbill (This project has only been tested with ROS 2 Humble. Compatibility with other ROS 2 distributions is not guaranteed.)
+- Python 3.10+
+- Other dependencies as listed in `requirements.txt`
 ### 1. Clone and build in a ROS2 workspace 
 ```bash
 $ cd ~/{ROS_WORKSPACE}/src
