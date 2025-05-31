@@ -1,4 +1,5 @@
 .env
+images/
 __pycache__/
 .vscode/*
 !.vscode/extensions.json
