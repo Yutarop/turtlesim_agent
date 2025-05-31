@@ -1,5 +1,6 @@
-# TurtleSim Agent
-## 🐢 Project Overview
+![turtlesim_agent_logo](https://github.com/user-attachments/assets/282f0708-41b6-45f9-9ce4-c749014e9183)
+## Project Overview
+
 `turtlesim_agent` is an AI agent that transforms the classic ROS [turtlesim](http://wiki.ros.org/turtlesim) simulator into a creative canvas driven by natural language. Powered by LangChain, this AI agent interprets text-based instructions and translates them into visual drawings, turning the simulated turtle into a digital artist. This project explores how large language models can interact with external environments to exhibit creative behavior. Users can describe shapes or drawing intentions in plain English, and the AI agent reasons through the instructions to execute them using turtlesim's motion commands.
 
 
