@@ -2,9 +2,7 @@
 
 import math
 
-from langchain.tools import StructuredTool, tool
-from pydantic import BaseModel, Field
-from pydantic.v1 import BaseModel, Field
+from langchain.tools import tool
 
 TWIST_ANGULAR = 0.8
 TWIST_VELOCITY = 1.0
