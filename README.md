@@ -1,7 +1,7 @@
-# TurtleSim Agent
-## 🐢 Project Overview
-`turtlesim_agent` is an AI agent that transforms the classic ROS [turtlesim](http://wiki.ros.org/turtlesim) simulator into a creative canvas driven by natural language. Powered by [LangChain](https://github.com/langchain-ai/langchain), this AI agent interprets text-based instructions and translates them into visual drawings, turning the simulated turtle into a digital artist. This project explores how large language models can interact with external environments to exhibit creative behavior. Users can describe shapes or drawing intentions in plain English, and the AI agent reasons through the instructions to execute them using turtlesim's motion commands.
-
+![turtlesim_agent_logo](https://github.com/user-attachments/assets/282f0708-41b6-45f9-9ce4-c749014e9183)
+![ROS2-humble Industrial CI](https://github.com/Yutarop/turtlesim_agent/actions/workflows/ros2_ci.yml/badge.svg)
+## Project Overview
+`turtlesim_agent` is an AI agent that transforms the classic ROS [turtlesim](http://wiki.ros.org/turtlesim) simulator into a creative canvas driven by natural language. Powered by LangChain, this AI agent interprets text-based instructions and translates them into visual drawings, turning the simulated turtle into a digital artist. This project explores how large language models can interact with external environments to exhibit creative behavior. Users can describe shapes or drawing intentions in plain English, and the AI agent reasons through the instructions to execute them using turtlesim's motion commands.
 
 ## TurtleSim Agent Demo
 #### 📐 Drawing Basic Shapes
@@ -142,48 +142,7 @@ To make new tools available:
 2. Define your custom functions using LangChain-compatible signatures.
 3. Import them in `all_tools.py` so that the agent can access them.
 
-## 🧪 Experiment
-
-To evaluate the drawing capabilities of the `turtlesim_agent`, we defined 10 levels of shape complexity. The table below presents how each LLM agent performs shape drawing via natural language prompts in turtlesim. 
-
-| Level | Shape                            | gpt-4o-mini | gemini-2.0-flash | mistral | claude-3-opus |
-|-------|----------------------------------|-------------|------------------|---------|----------------|
-| 1     | Circle                           | —           | —                | —       | —              |
-| 1     | Square                           | —           | —                | —       | —              |
-| 1     | Triangle                         | —           | —                | —       | —              |
-| 2     | Rectangle                        | —           | —                | —       | —              |
-| 2     | Parallelogram                    | —           | —                | —       | —              |
-| 2     | Pentagon                         | —           | —                | —       | —              |
-| 3     | Ellipse                          | —           | —                | —       | —              |
-| 3     | Star shape made of lines        | [⭕](images/gpt-4o-mini/level3_star_shape_made_of_lines.png)           | —                | —       | —              |
-| 3     | Circle inside a triangle         | —           | —                | —       | —              |
-| 4     | Hexagon                          | —           | —                | —       | —              |
-| 4     | Octagon                          | —           | —                | —       | —              |
-| 4     | Decagon                          | —           | —                | —       | —              |
-| 5     | Circle inside a triangle         | —           | —                | —       | —              |
-| 5     | Triangle inside a square         | —           | —                | —       | —              |
-| 5     | Square inside a circle           | —           | —                | —       | —              |
-| 6     | Cube (2D representation)         | —           | —                | —       | —              |
-| 6     | Cylinder (2D view)               | —           | —                | —       | —              |
-| 6     | Cone (2D view)                   | —           | —                | —       | —              |
-| 7     | Star-shaped polygon              | —           | —                | —       | —              |
-| 7     | Overlapping circles              | —           | —                | —       | —              |
-| 7     | Combined triangles               | —           | —                | —       | —              |
-| 8     | Spiral                           | —           | —                | —       | —              |
-| 8     | Wave shape                       | —           | —                | —       | —              |
-| 8     | Part of a fractal                | —           | —                | —       | —              |
-| 9     | Irregular polygon                | —           | —                | —       | —              |
-| 9     | Complex curve combination        | —           | —                | —       | —              |
-| 9     | Geometric pattern                | —           | —                | —       | —              |
-| 10    | Torus (2D view)                  | —           | —                | —       | —              |
-| 10    | Mandelbrot fractal section       | —           | —                | —       | —              |
-| 10    | Non-Euclidean geometric shape    | —           | —                | —       | —              |
-
-
-> ⭕ = Successfully drawn  
-> ❌ = Failed or incorrect output  
-> —  = Not yet tested
-
 ## 🤝 Contributing
 We welcome any ideas that make TurtleSim Agent more creative and expressive.
-Whether it's new tools, smarter models, better prompts, experimental results, or entirely new use cases — feel free to open an issue or pull request.
+
+Whether it's new tools, smarter models, better prompts, experimental results, or entirely new use cases — feel free to open an issue or pull request. The results of the experiment will be posted and updated on the wiki. If you manage to draw a shape successfully, please update the [wiki](https://github.com/Yutarop/turtlesim_agent/wiki/Experiment)!
