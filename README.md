@@ -5,8 +5,12 @@
 
 ## TurtleSim Agent Demo
 #### 📐 Drawing Basic Shapes
->
+
+https://github.com/user-attachments/assets/049a6c99-ab22-458f-abac-61694f82df55
+
+
 #### 🌈 Drawing a Rainbow
+##### Prompt used
 > I want you to draw a rainbow composed of 7 semi-circular arcs, each with a different color and a radius ranging from 2.0 cm to 2.7 cm. The colors should follow the traditional rainbow order: violet, indigo, blue, green, yellow, orange, red with the pen's width of 5. Please offset the starting position of each semi-circle by 0.1 cm to avoid overlap.
 
 https://github.com/user-attachments/assets/ea9aee14-bdff-4f2b-8b49-c262b09e9051
