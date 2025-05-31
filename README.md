@@ -3,8 +3,10 @@
 `turtlesim_agent` is an AI agent that transforms the classic ROS [turtlesim](http://wiki.ros.org/turtlesim) simulator into a creative canvas driven by natural language. Powered by [LangChain](https://github.com/langchain-ai/langchain), this AI agent interprets text-based instructions and translates them into visual drawings, turning the simulated turtle into a digital artist. This project explores how large language models can interact with external environments to exhibit creative behavior. Users can describe shapes or drawing intentions in plain English, and the AI agent reasons through the instructions to execute them using turtlesim's motion commands.
 
 
-## 🌈 TurtleSim Agent Demo: Drawing a Rainbow
-#### Prompt Used
+## TurtleSim Agent Demo
+#### 📐 Drawing Basic Shapes
+>
+#### 🌈 Drawing a Rainbow
 > I want you to draw a rainbow composed of 7 semi-circular arcs, each with a different color and a radius ranging from 2.0 cm to 2.7 cm. The colors should follow the traditional rainbow order: violet, indigo, blue, green, yellow, orange, red with the pen's width of 5. Please offset the starting position of each semi-circle by 0.1 cm to avoid overlap.
 
 https://github.com/user-attachments/assets/ea9aee14-bdff-4f2b-8b49-c262b09e9051
