@@ -18,7 +18,7 @@ setup(
     zip_safe=True,
     maintainer="ubuntu",
     maintainer_email="yutarop.storm.7@gmail.com",
-    description="A ROS2 package that integrates a TurtleSim with AI agents to enable natural language control of the robot.",
+    description="TurtleSim Agent is an AI agent for the turtlesim simulator that interprets text instructions and transforms them into visual outputs using LangChain-turning the simulated turtle into a creative artist",
     license="MIT License",
     tests_require=["pytest"],
     entry_points={

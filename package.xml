@@ -4,7 +4,7 @@
   <name>turtlesim_agent</name>
   <version>0.0.0</version>
   <description>
-    A ROS2 package that integrates a TurtleSim with AI Agent to enable natural language control of the robot.
+   TurtleSim Agent is an AI agent for the turtlesim simulator that interprets text instructions and transforms them into visual outputs using LangChain-turning the simulated turtle into a creative artist.
   </description>
   <maintainer email="yutarop.storm.7@gmail.com">ubuntu</maintainer>
   <license>TODO: License declaration</license>
