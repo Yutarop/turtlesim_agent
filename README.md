@@ -142,7 +142,4 @@ To make new tools available:
 2. Define your custom functions using LangChain-compatible signatures.
 3. Import them in `all_tools.py` so that the agent can access them.
 
-## 🤝 Contributing
-We welcome any ideas that make TurtleSim Agent more creative and expressive.
-
-Whether it's new tools, smarter models, better prompts, experimental results, or entirely new use cases — feel free to open an issue or pull request. The results of the experiment will be posted and updated on the wiki. If you manage to draw a shape successfully, please update the [wiki](https://github.com/Yutarop/turtlesim_agent/wiki/Experiment)!
+[wiki](https://github.com/Yutarop/turtlesim_agent/wiki/Experiment)
