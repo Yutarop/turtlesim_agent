@@ -141,5 +141,3 @@ To make new tools available:
 1. Create a new `*_tools.py` file in the `tools/` directory.
 2. Define your custom functions using LangChain-compatible signatures.
 3. Import them in `all_tools.py` so that the agent can access them.
-
-[wiki](https://github.com/Yutarop/turtlesim_agent/wiki/Experiment)
