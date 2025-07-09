@@ -57,7 +57,9 @@ def create_agent(model_name: str, tools: list, temperature: float):
 
     # Google Models
     elif model_name == "gemini-2.0-flash":
-        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=temperature)
+        llm = ChatGoogleGenerativeAI(
+            model="gemini-2.0-flash-lite", temperature=temperature
+        )
         return create_tool_calling_agent(llm, tools=tools, prompt=prompt)
     elif model_name == "gemini-1.5-pro":
         llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=temperature)
@@ -68,13 +70,13 @@ def create_agent(model_name: str, tools: list, temperature: float):
 
     # Mistral AI Models
     elif model_name == "mistral-large":
-        llm = ChatMistralAI(model="mistral-large-latest", temperature=temperature)
+        llm = ChatMistralAI(model="mistral-large-2411", temperature=temperature)
         return create_tool_calling_agent(llm, tools=tools, prompt=prompt)
     elif model_name == "mistral-medium":
         llm = ChatMistralAI(model="mistral-medium-latest", temperature=temperature)
         return create_tool_calling_agent(llm, tools=tools, prompt=prompt)
-    elif model_name == "mistral-small":
-        llm = ChatMistralAI(model="mistral-small-latest", temperature=temperature)
+    elif model_name == "mistral":
+        llm = ChatMistralAI(model="ministral-8b-2410", temperature=temperature)
         return create_tool_calling_agent(llm, tools=tools, prompt=prompt)
 
     # Cohere Models

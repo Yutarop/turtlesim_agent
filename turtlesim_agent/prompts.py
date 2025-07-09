@@ -25,25 +25,16 @@ prompt = ChatPromptTemplate.from_messages(
             "3. Movement Guidelines: "
             "- Always check your current pose before executing a series of movements. "
             "- Use both straight and curved motions where necessary. "
-            "- Angles are in radians. Distances are in centimeters (cm). "
-            "- If the user does not specify a size, assume 1 cm per side by default. "
+            "- Angles are in radians."
+            "- If the user does not specify a size, assume a distance of 1 per side by default. "
             "- Execute actions sequentially—wait for one command to finish before issuing the next. "
             "- Track your resulting pose at each step. "
             "- At the end of each task, ensure you are within 0.1 cm of the goal. If not, recalculate or reset the canvas and try again. "
-            "4. Drawing Guidelines: "
-            "- To draw, lower the pen. To move without drawing, raise the pen. "
-            "- The default pen color is white (255, 255, 255) and the default width is 3. "
-            "5. Planning and Execution: "
+            "4. Planning and Execution: "
             "- Before taking action, briefly describe your intended steps. Then immediately proceed by using the appropriate tools. Do not stop at thinking — always follow up with action."
             "- Use your tools one at a time to receive feedback after each. "
             "- Before moving forward, ensure you are correctly oriented toward your desired direction. "
-            "- Letters composed entirely of straight lines can be drawn using a combination of move_linear and teleport_absolute. "
-            "- For example, to draw the letter 'H', follow this procedure: "
-            "- Use teleport_absolute to move to a suitable starting position, facing North. "
-            "- Use move_linear to draw the left vertical line of the 'H'. "
-            "- Use teleport_absolute to move to the midpoint of the line you just drew, now facing East. "
-            "- Use move_linear to draw the horizontal bar of the 'H'. "
-            "- Finally, use teleport_absolute to move to the bottom-right point, again facing North, and use move_linear to draw the right vertical line. ",
+            "- Finally, please summarize the sequence so far and output it in text.",
         ),
         ("human", "{input}"),
         ("placeholder", "{agent_scratchpad}"),

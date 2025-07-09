@@ -54,27 +54,27 @@ def make_all_tools(node) -> list:
     """
     return [
         # Math tools
-        degrees_to_radians,
-        calculate_euclidean_distance,
-        compute_duration_from_circular_angle_and_angular_velocity,
-        compute_linear_and_angular_velocity_from_radius,
-        make_move_on_arc_tool(node),
+        # degrees_to_radians,
+        # calculate_euclidean_distance,
+        # compute_duration_from_circular_angle_and_angular_velocity,
+        # compute_linear_and_angular_velocity_from_radius,
+        # make_move_on_arc_tool(node),
         # Status tools
-        make_check_bounds_tool(node),
+        # make_check_bounds_tool(node),
         make_get_turtle_pose_tool(node),
-        make_get_pen_status_tool(node),
+        # make_get_pen_status_tool(node),
         # Motion tools
         make_move_linear_tool(node),
-        make_move_non_linear_tool(node),
+        # make_move_non_linear_tool(node),
         make_rotate_tool(node),
-        make_teleport_absolute_tool(node),
-        make_teleport_relative_tool(node),
+        # make_teleport_absolute_tool(node),
+        # make_teleport_relative_tool(node),
         # Pen tools
-        make_set_pen_color_width_tool(node),
-        make_set_pen_up_down_tool(node),
+        # make_set_pen_color_width_tool(node),
+        # make_set_pen_up_down_tool(node),
         # Simulation tools
-        make_reset_tool(node),
-        make_clear_tool(node),
-        make_kill_tool(node),
-        make_spawn_tool(node),
+        # make_reset_tool(node),
+        # make_clear_tool(node),
+        # make_kill_tool(node),
+        # make_spawn_tool(node),
     ]

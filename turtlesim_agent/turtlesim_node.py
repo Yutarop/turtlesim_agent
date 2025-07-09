@@ -22,7 +22,7 @@ class TurtleSimAgent(Node):
     def __init__(self):
         super().__init__("turtlesim_agent")
         self.declare_parameter("interface", "cli")
-        self.declare_parameter("agent_model", "gemini-2.0-flash")
+        self.declare_parameter("agent_model", "mistral-large")
 
         self.interface = (
             self.get_parameter("interface").get_parameter_value().string_value
